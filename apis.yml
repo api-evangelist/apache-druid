@@ -1,0 +1,36 @@
+aid: apache-druid
+name: Apache Druid
+description: >-
+  Apache Druid is a high-performance, real-time analytics database designed for workflows where fast slice-and-dice analytics and instant data visibility matter. It supports both streaming and batch data ingestion with sub-second OLAP queries.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Analytics
+  - OLAP
+  - Real-Time
+  - Time Series
+  - Database
+created: '2026-03-16'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: apache-druid:apache-druid-rest-api
+    name: Apache Druid REST API
+    description: >-
+      The Druid API provides REST endpoints for native JSON queries, SQL queries, data ingestion (both batch and streaming), datasource management, supervisor management, coordinator and overlord operations, and a JDBC driver for SQL access.
+    humanURL: https://druid.apache.org/docs/latest/api-reference/
+    tags:
+      - REST
+      - SQL
+      - Analytics
+      - Queries
+    properties:
+      - type: Documentation
+        url: https://druid.apache.org/docs/latest/api-reference/
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
