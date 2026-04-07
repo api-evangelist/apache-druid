@@ -8,10 +8,10 @@ access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Analytics
+  - Database
   - OLAP
   - Real-Time
   - Time Series
-  - Database
 created: '2026-03-16'
 modified: '2026-03-16'
 url: >-
@@ -24,10 +24,10 @@ apis:
       The Druid API provides REST endpoints for native JSON queries, SQL queries, data ingestion (both batch and streaming), datasource management, supervisor management, coordinator and overlord operations, and a JDBC driver for SQL access.
     humanURL: https://druid.apache.org/docs/latest/api-reference/
     tags:
-      - REST
-      - SQL
       - Analytics
       - Queries
+      - REST
+      - SQL
     properties:
       - type: Documentation
         url: https://druid.apache.org/docs/latest/api-reference/
