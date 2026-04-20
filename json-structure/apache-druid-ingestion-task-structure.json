@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-structure/apache-druid-ingestion-task-structure.json",
+  "name": "IngestionTask",
+  "description": "An Apache Druid data ingestion task for batch or streaming data loading.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique task ID assigned by Druid.",
+      "example": "index_kafka_wikipedia_abc123_0"
+    },
+    "type": {
+      "type": "string",
+      "description": "Task type identifier.",
+      "enum": [
+        "index",
+        "index_parallel",
+        "index_kafka",
+        "index_kinesis",
+        "compact",
+        "kill"
+      ],
+      "example": "index_parallel"
+    },
+    "dataSource": {
+      "type": "string",
+      "description": "Target datasource name.",
+      "example": "wikipedia"
+    },
+    "groupId": {
+      "type": "string",
+      "description": "Task group ID for parallel tasks.",
+      "example": "index_parallel_wikipedia_abc123"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current task status.",
+      "enum": [
+        "WAITING",
+        "PENDING",
+        "RUNNING",
+        "SUCCESS",
+        "FAILED"
+      ],
+      "example": "RUNNING"
+    },
+    "createdTime": {
+      "type": "datetime",
+      "description": "Task creation timestamp.",
+      "example": "2025-03-15T14:30:00Z"
+    },
+    "queueInsertionTime": {
+      "type": "datetime",
+      "description": "Task queue insertion timestamp.",
+      "example": "2025-03-15T14:30:05Z"
+    },
+    "location": {
+      "type": "object",
+      "description": "Host and port where this task is running.",
+      "properties": {
+        "host": {
+          "type": "string",
+          "example": "druid-worker-01"
+        },
+        "port": {
+          "type": "int32",
+          "example": 8100
+        }
+      }
+    },
+    "duration": {
+      "type": "int32",
+      "description": "Task duration in milliseconds (-1 if still running).",
+      "example": -1
+    }
+  }
+}

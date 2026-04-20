@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-structure/apache-druid-supervisor-structure.json",
+  "name": "Supervisor",
+  "description": "An Apache Druid supervisor for managing continuous streaming data ingestion from Kafka or Kinesis.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Supervisor ID (same as datasource name by convention).",
+      "example": "wikipedia-kafka"
+    },
+    "state": {
+      "type": "string",
+      "description": "Supervisor operational state.",
+      "enum": [
+        "PENDING",
+        "RUNNING",
+        "STOPPING",
+        "STOPPED",
+        "UNHEALTHY_SUPERVISOR",
+        "UNHEALTHY_TASKS"
+      ],
+      "example": "RUNNING"
+    },
+    "healthStatus": {
+      "type": "string",
+      "description": "Supervisor health status.",
+      "enum": [
+        "HEALTHY",
+        "UNHEALTHY"
+      ],
+      "example": "HEALTHY"
+    },
+    "detailedState": {
+      "type": "string",
+      "description": "Detailed supervisor sub-state.",
+      "example": "RUNNING"
+    },
+    "spec": {
+      "type": "object",
+      "description": "Full supervisor spec including ioConfig and tuningConfig."
+    },
+    "lastTaskCompletionTime": {
+      "type": "datetime",
+      "description": "When the last task completed.",
+      "example": "2025-03-15T14:30:00Z"
+    },
+    "activeTasks": {
+      "type": "int32",
+      "description": "Number of currently active ingestion tasks.",
+      "example": 2
+    },
+    "publishingTasks": {
+      "type": "int32",
+      "description": "Number of tasks publishing segments.",
+      "example": 0
+    }
+  }
+}

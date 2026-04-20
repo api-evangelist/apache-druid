@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-schema/apache-druid-sql-query-response-schema.json",
+  "title": "SqlQueryResponse",
+  "description": "Response from the Apache Druid SQL API with query results and metadata.",
+  "type": "object",
+  "properties": {
+    "queryId": {
+      "type": "string",
+      "description": "Unique ID assigned to this query.",
+      "example": "abc-123-def-456"
+    },
+    "columns": {
+      "type": "array",
+      "description": "Column names in result order.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "__time",
+        "page",
+        "added"
+      ]
+    },
+    "columnTypes": {
+      "type": "array",
+      "description": "Column Druid types.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "TIMESTAMP",
+        "STRING",
+        "LONG"
+      ]
+    },
+    "sqlTypes": {
+      "type": "array",
+      "description": "Column SQL types.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "TIMESTAMP",
+        "VARCHAR",
+        "BIGINT"
+      ]
+    },
+    "results": {
+      "type": "array",
+      "description": "Query result rows (format depends on resultFormat).",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

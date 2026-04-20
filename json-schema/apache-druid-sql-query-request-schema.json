@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-schema/apache-druid-sql-query-request-schema.json",
+  "title": "SqlQueryRequest",
+  "description": "Request body for the Apache Druid SQL query API (POST /druid/v2/sql).",
+  "type": "object",
+  "properties": {
+    "query": {
+      "type": "string",
+      "description": "SQL query string to execute.",
+      "example": "SELECT __time, page, added FROM wikipedia WHERE __time > '2015-09-12' LIMIT 10"
+    },
+    "resultFormat": {
+      "type": "string",
+      "description": "Format for the query results.",
+      "enum": [
+        "object",
+        "array",
+        "objectLines",
+        "arrayLines",
+        "csv"
+      ],
+      "default": "object",
+      "example": "object"
+    },
+    "header": {
+      "type": "boolean",
+      "description": "Whether to return column names in the first row (for array/objectLines formats).",
+      "default": false,
+      "example": false
+    },
+    "typesHeader": {
+      "type": "boolean",
+      "description": "Whether to include column data types in a header row.",
+      "default": false,
+      "example": false
+    },
+    "sqlTypesHeader": {
+      "type": "boolean",
+      "description": "Whether to include SQL type names in a header row.",
+      "default": false,
+      "example": false
+    },
+    "context": {
+      "type": "object",
+      "description": "Query context parameters for controlling execution behavior.",
+      "properties": {
+        "timeout": {
+          "type": "integer",
+          "description": "Query timeout in milliseconds.",
+          "example": 30000
+        },
+        "priority": {
+          "type": "integer",
+          "description": "Query priority (lower is higher priority).",
+          "example": 0
+        },
+        "queryId": {
+          "type": "string",
+          "description": "Custom query ID for tracking.",
+          "example": "my-query-001"
+        }
+      }
+    },
+    "parameters": {
+      "type": "array",
+      "description": "Parameterized query values.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "VARCHAR"
+          },
+          "value": {
+            "type": "string",
+            "example": "en"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "query"
+  ]
+}

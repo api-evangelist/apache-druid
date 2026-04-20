@@ -1,0 +1,10 @@
+{
+  "id": "wikipedia-kafka",
+  "state": "RUNNING",
+  "healthStatus": "HEALTHY",
+  "detailedState": "RUNNING",
+  "spec": {},
+  "lastTaskCompletionTime": "2025-03-15T14:30:00Z",
+  "activeTasks": 2,
+  "publishingTasks": 0
+}

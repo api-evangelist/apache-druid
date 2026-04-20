@@ -1,0 +1,199 @@
+vocabulary: 1.0.0
+info:
+  provider: Apache Druid
+  description: Vocabulary for Apache Druid, the real-time OLAP analytics database with time-based partitioning and columnar storage.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - namespace: druid-sql-api
+    version: 31.x
+    baseUrl: http://router:8888/druid/v2/sql
+    status: active
+    description: SQL query API
+  - namespace: druid-native-api
+    version: 31.x
+    baseUrl: http://router:8888/druid/v2
+    status: active
+    description: Native JSON query API
+  - namespace: druid-overlord-api
+    version: 31.x
+    baseUrl: http://overlord:8090/druid/indexer/v1
+    status: active
+    description: Task and supervisor management API
+  - namespace: druid-coordinator-api
+    version: 31.x
+    baseUrl: http://coordinator:8081/druid/coordinator/v1
+    status: active
+    description: Segment and datasource management API
+  resources:
+  - name: sql-query
+    description: Druid SQL query
+    actions:
+    - submit
+    - cancel
+    - explain
+    apis:
+    - druid-sql-api
+  - name: native-query
+    description: Native JSON query (Timeseries, TopN, GroupBy, Scan)
+    actions:
+    - submit
+    - cancel
+    apis:
+    - druid-native-api
+  - name: ingestion-task
+    description: Batch or streaming data ingestion task
+    actions:
+    - submit
+    - get-status
+    - shutdown
+    - list
+    apis:
+    - druid-overlord-api
+  - name: supervisor
+    description: Streaming ingestion supervisor (Kafka/Kinesis)
+    actions:
+    - create
+    - get
+    - suspend
+    - resume
+    - terminate
+    - reset
+    - list
+    apis:
+    - druid-overlord-api
+  - name: datasource
+    description: Druid datasource (table of ingested data)
+    actions:
+    - list
+    - get
+    - delete
+    - enable
+    - disable
+    apis:
+    - druid-coordinator-api
+  - name: segment
+    description: Druid data segment (time-partitioned data chunk)
+    actions:
+    - list
+    - get
+    - mark-used
+    - mark-unused
+    apis:
+    - druid-coordinator-api
+  actions:
+  - name: submit
+    description: Submit a query or ingestion task for execution
+    pattern: write
+  - name: cancel
+    description: Cancel an in-progress query or task
+    pattern: write
+  - name: suspend
+    description: Suspend a streaming supervisor
+    pattern: write
+  - name: resume
+    description: Resume a suspended supervisor
+    pattern: write
+  - name: terminate
+    description: Stop a supervisor permanently
+    pattern: destructive
+  - name: explain
+    description: Explain the query execution plan
+    pattern: read
+  schemas:
+    queries:
+    - SqlQueryRequest
+    - SqlQueryResponse
+    ingestion:
+    - IngestionTask
+    streaming:
+    - Supervisor
+  enums:
+    resultFormat:
+    - object
+    - array
+    - objectLines
+    - arrayLines
+    - csv
+    taskType:
+    - index
+    - index_parallel
+    - index_kafka
+    - index_kinesis
+    - compact
+    - kill
+    taskStatus:
+    - WAITING
+    - PENDING
+    - RUNNING
+    - SUCCESS
+    - FAILED
+    supervisorState:
+    - PENDING
+    - RUNNING
+    - STOPPING
+    - STOPPED
+    - UNHEALTHY_SUPERVISOR
+    - UNHEALTHY_TASKS
+  authentication:
+    schemes:
+    - HTTP Basic Auth (username/password)
+    - LDAP
+    - No auth (development mode)
+capability:
+  workflows: []
+  personas:
+  - id: data-analyst
+    name: Data Analyst
+    description: Queries Druid with SQL for real-time dashboards, ad-hoc analysis, and reporting
+  - id: data-engineer
+    name: Data Engineer
+    description: Manages ingestion tasks, supervisors, and datasource configurations
+  - id: platform-admin
+    name: Platform Administrator
+    description: Manages Druid cluster configuration, segment compaction, and retention policies
+  domains:
+  - name: Real-Time Analytics
+    description: Sub-second OLAP queries on event-time data with time-based filtering
+  - name: Streaming Ingestion
+    description: Continuous data loading from Kafka and Kinesis with supervisor management
+  - name: Segment Management
+    description: Segment lifecycle, compaction, and retention management
+  namespaces: []
+  binds: []
+crossReference:
+- resource: sql-query
+  operations:
+  - submit
+  - explain
+  - cancel
+  workflows: []
+  personas:
+  - data-analyst
+- resource: ingestion-task
+  operations:
+  - submit
+  - get-status
+  - shutdown
+  workflows: []
+  personas:
+  - data-engineer
+- resource: supervisor
+  operations:
+  - create
+  - suspend
+  - resume
+  - terminate
+  workflows: []
+  personas:
+  - data-engineer
+  - platform-admin
+- resource: segment
+  operations:
+  - list
+  - mark-used
+  - mark-unused
+  workflows: []
+  personas:
+  - platform-admin

@@ -1,0 +1,14 @@
+{
+  "id": "index_kafka_wikipedia_abc123_0",
+  "type": "index_parallel",
+  "dataSource": "wikipedia",
+  "groupId": "index_parallel_wikipedia_abc123",
+  "status": "RUNNING",
+  "createdTime": "2025-03-15T14:30:00Z",
+  "queueInsertionTime": "2025-03-15T14:30:05Z",
+  "location": {
+    "host": "druid-worker-01",
+    "port": 8100
+  },
+  "duration": -1
+}

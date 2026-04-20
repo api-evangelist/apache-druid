@@ -1,0 +1,146 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "druid": "https://druid.apache.org/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "SqlQueryRequest": "druid:SqlQueryRequest",
+    "SqlQueryResponse": "druid:SqlQueryResponse",
+    "IngestionTask": "druid:IngestionTask",
+    "Supervisor": "druid:Supervisor",
+    "activeTasks": {
+      "@id": "druid:activeTasks",
+      "@type": "xsd:integer"
+    },
+    "columnTypes": {
+      "@id": "druid:columnTypes",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "columns": {
+      "@id": "druid:columns",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "context": {
+      "@id": "druid:context",
+      "@type": "@id"
+    },
+    "createdTime": {
+      "@id": "druid:createdTime",
+      "@type": "xsd:dateTime"
+    },
+    "dataSource": {
+      "@id": "druid:dataSource",
+      "@type": "xsd:string"
+    },
+    "detailedState": {
+      "@id": "druid:detailedState",
+      "@type": "xsd:string"
+    },
+    "duration": {
+      "@id": "druid:duration",
+      "@type": "xsd:integer"
+    },
+    "groupId": {
+      "@id": "druid:groupId",
+      "@type": "xsd:string"
+    },
+    "header": {
+      "@id": "druid:header",
+      "@type": "xsd:boolean"
+    },
+    "healthStatus": {
+      "@id": "druid:healthStatus",
+      "@type": "xsd:string"
+    },
+    "host": {
+      "@id": "druid:host",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "druid:id",
+      "@type": "xsd:string"
+    },
+    "lastTaskCompletionTime": {
+      "@id": "druid:lastTaskCompletionTime",
+      "@type": "xsd:dateTime"
+    },
+    "location": {
+      "@id": "druid:location",
+      "@type": "@id"
+    },
+    "parameters": {
+      "@id": "druid:parameters",
+      "@container": "@set",
+      "@type": "@id"
+    },
+    "port": {
+      "@id": "druid:port",
+      "@type": "xsd:integer"
+    },
+    "priority": {
+      "@id": "druid:priority",
+      "@type": "xsd:integer"
+    },
+    "publishingTasks": {
+      "@id": "druid:publishingTasks",
+      "@type": "xsd:integer"
+    },
+    "query": "schema:query",
+    "queryId": {
+      "@id": "druid:queryId",
+      "@type": "xsd:string"
+    },
+    "queueInsertionTime": {
+      "@id": "druid:queueInsertionTime",
+      "@type": "xsd:dateTime"
+    },
+    "resultFormat": {
+      "@id": "druid:resultFormat",
+      "@type": "xsd:string"
+    },
+    "results": {
+      "@id": "druid:results",
+      "@container": "@set",
+      "@type": "@id"
+    },
+    "spec": {
+      "@id": "druid:spec",
+      "@type": "@id"
+    },
+    "sqlTypes": {
+      "@id": "druid:sqlTypes",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "sqlTypesHeader": {
+      "@id": "druid:sqlTypesHeader",
+      "@type": "xsd:boolean"
+    },
+    "state": {
+      "@id": "druid:state",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "druid:status",
+      "@type": "xsd:string"
+    },
+    "timeout": {
+      "@id": "druid:timeout",
+      "@type": "xsd:integer"
+    },
+    "type": {
+      "@id": "druid:type",
+      "@type": "xsd:string"
+    },
+    "typesHeader": {
+      "@id": "druid:typesHeader",
+      "@type": "xsd:boolean"
+    },
+    "value": {
+      "@id": "druid:value",
+      "@type": "xsd:string"
+    }
+  }
+}

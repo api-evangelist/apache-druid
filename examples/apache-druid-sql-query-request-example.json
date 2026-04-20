@@ -1,0 +1,18 @@
+{
+  "query": "SELECT __time, page, added FROM wikipedia WHERE __time > '2015-09-12' LIMIT 10",
+  "resultFormat": "object",
+  "header": false,
+  "typesHeader": false,
+  "sqlTypesHeader": false,
+  "context": {
+    "timeout": 30000,
+    "priority": 0,
+    "queryId": "my-query-001"
+  },
+  "parameters": [
+    {
+      "type": "VARCHAR",
+      "value": "en"
+    }
+  ]
+}

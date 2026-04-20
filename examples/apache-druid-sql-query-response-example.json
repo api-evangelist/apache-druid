@@ -1,0 +1,21 @@
+{
+  "queryId": "abc-123-def-456",
+  "columns": [
+    "__time",
+    "page",
+    "added"
+  ],
+  "columnTypes": [
+    "TIMESTAMP",
+    "STRING",
+    "LONG"
+  ],
+  "sqlTypes": [
+    "TIMESTAMP",
+    "VARCHAR",
+    "BIGINT"
+  ],
+  "results": [
+    {}
+  ]
+}
