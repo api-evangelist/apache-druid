@@ -44,6 +44,8 @@ apis:
   properties:
   - type: Documentation
     url: https://druid.apache.org/docs/latest/api-reference/
+  - url: openapi/apache-druid-openapi.yml
+    type: OpenAPI
   - type: GettingStarted
     url: https://druid.apache.org/docs/latest/tutorials/tutorial-batch-hadoop
   - type: APIReference
