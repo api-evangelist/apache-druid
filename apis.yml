@@ -1,9 +1,10 @@
 aid: apache-druid
 name: Apache Druid
-description: >-
-  Apache Druid is a high-performance, real-time analytics database governed by the Apache Software Foundation, designed for fast slice-and-dice OLAP queries on event-time data. It features a distributed,
-  column-oriented storage engine with automatic rollup, supports both streaming (Kafka, Kinesis) and batch (S3, HDFS, local) data ingestion, and provides a SQL query interface plus a native JSON query API
-  via REST. Druid is optimized for sub-second queries at petabyte scale with high concurrency.
+description: Apache Druid is a high-performance, real-time analytics database governed by the Apache Software Foundation,
+  designed for fast slice-and-dice OLAP queries on event-time data. It features a distributed, column-oriented storage engine
+  with automatic rollup, supports both streaming (Kafka, Kinesis) and batch (S3, HDFS, local) data ingestion, and provides
+  a SQL query interface plus a native JSON query API via REST. Druid is optimized for sub-second queries at petabyte scale
+  with high concurrency.
 type: Index
 position: Consumer
 access: 3rd-Party
@@ -19,16 +20,16 @@ tags:
 - SQL
 - Time Series
 created: '2026-03-16'
-modified: '2026-04-19'
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/apis.yml
+modified: '2026-05-19'
+url: https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
 - aid: apache-druid:apache-druid-rest-api
   name: Apache Druid REST API
-  description: >-
-    Druid exposes REST APIs for Druid SQL (POST /druid/v2/sql), native JSON queries (POST /druid/v2), batch and streaming data ingestion tasks, supervisor management for Kafka/Kinesis ingestion, data segment
-    management, coordinator and overlord operations, process status, and dynamic configuration. A JDBC driver is also available for SQL access via JDBC clients.
+  description: Druid exposes REST APIs for Druid SQL (POST /druid/v2/sql), native JSON queries (POST /druid/v2), batch and
+    streaming data ingestion tasks, supervisor management for Kafka/Kinesis ingestion, data segment management, coordinator
+    and overlord operations, process status, and dynamic configuration. A JDBC driver is also available for SQL access via
+    JDBC clients.
   humanURL: https://druid.apache.org/docs/latest/api-reference/
   tags:
   - Analytics
@@ -91,6 +92,8 @@ apis:
     url: https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/examples/apache-druid-sql-query-response-example.json
   - type: Example
     url: https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/examples/apache-druid-supervisor-example.json
+  - type: NaftikoCapability
+    url: capabilities/apache-druid.yaml
 maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
@@ -112,13 +115,16 @@ common:
 - type: Features
   data:
   - name: Sub-Second OLAP Queries
-    description: Columnar storage with bitmap indexes, dictionary encoding, and pre-aggregation (rollup) enables sub-second queries on billions of events.
+    description: Columnar storage with bitmap indexes, dictionary encoding, and pre-aggregation (rollup) enables sub-second
+      queries on billions of events.
   - name: Druid SQL API
-    description: REST endpoint for submitting standard SQL queries with ANSI SQL support, time-based filtering, and streaming response options.
+    description: REST endpoint for submitting standard SQL queries with ANSI SQL support, time-based filtering, and streaming
+      response options.
   - name: Native JSON Query API
     description: Druid-native query format (Timeseries, TopN, GroupBy, Scan, Search) for maximum control and performance.
   - name: Streaming Ingestion
-    description: Real-time data ingestion from Apache Kafka and Amazon Kinesis with supervisor-managed offset tracking and exactly-once semantics.
+    description: Real-time data ingestion from Apache Kafka and Amazon Kinesis with supervisor-managed offset tracking and
+      exactly-once semantics.
   - name: Batch Ingestion
     description: Parallel batch indexing tasks from local files, S3, GCS, HDFS, and other external storage systems.
   - name: Automatic Rollup
