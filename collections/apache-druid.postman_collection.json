@@ -1,0 +1,1204 @@
+{
+  "item": [
+    {
+      "id": "5f043b2f-9560-4d85-8c3f-fa2a66dfbf69",
+      "name": "Submit a Druid SQL query",
+      "request": {
+        "name": "Submit a Druid SQL query",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "v2",
+            "sql"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "6d56060f-e6e4-4c14-9a44-8c4d7dd3d719",
+          "name": "Query results",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "v2",
+                "sql"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "[]",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "0b6b429e-6a86-4b59-a4d9-7f06b76b42f9",
+      "name": "Cancel a SQL query",
+      "request": {
+        "name": "Cancel a SQL query",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "v2",
+            "sql",
+            ":sqlQueryId"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "sqlQueryId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "0025a8fb-5a9d-4378-accc-f5f7564efb9a",
+          "name": "Cancellation accepted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "v2",
+                "sql",
+                ":sqlQueryId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sqlQueryId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "Accepted",
+          "code": 202,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "776bfd50-9647-4d71-8848-3b5c92492613",
+      "name": "Submit an asynchronous SQL statement",
+      "request": {
+        "name": "Submit an asynchronous SQL statement",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "v2",
+            "sql",
+            "statements"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "5a8d53fd-0e1f-464c-9a5c-d48584a180c4",
+          "name": "Statement accepted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "v2",
+                "sql",
+                "statements"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "2890aeeb-578f-4b52-8c40-9a43f2fa3206",
+      "name": "Get statement status",
+      "request": {
+        "name": "Get statement status",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "v2",
+            "sql",
+            "statements",
+            ":queryId"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "queryId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "f5b6a6e1-77ff-4656-bd41-9e89631208f7",
+          "name": "Statement status",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "v2",
+                "sql",
+                "statements",
+                ":queryId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "queryId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "28565a53-725a-4ff1-b5bc-e92bf10cfdb5",
+      "name": "Cancel an asynchronous statement",
+      "request": {
+        "name": "Cancel an asynchronous statement",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "v2",
+            "sql",
+            "statements",
+            ":queryId"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "queryId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "18c67584-e1a5-4eff-bde9-be21612ef9a5",
+          "name": "Cancellation accepted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "v2",
+                "sql",
+                "statements",
+                ":queryId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "queryId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "Accepted",
+          "code": 202,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "384f6f66-74f0-4ae7-9567-9f5b104a013d",
+      "name": "Fetch statement results",
+      "request": {
+        "name": "Fetch statement results",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "v2",
+            "sql",
+            "statements",
+            ":queryId",
+            "results"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "queryId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "b02e0c36-ec23-4829-ab2e-a413debbddb8",
+          "name": "Results",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "v2",
+                "sql",
+                "statements",
+                ":queryId",
+                "results"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "queryId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "[]",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "9fb0d5b9-b7db-4360-94e3-a5bafa696816",
+      "name": "Mark all segments of a datasource as used",
+      "request": {
+        "name": "Mark all segments of a datasource as used",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "indexer",
+            "v1",
+            "datasources",
+            ":datasource"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "datasource",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "1cc60e8f-d336-4c41-a92d-6d132b206681",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "indexer",
+                "v1",
+                "datasources",
+                ":datasource"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "datasource",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "3409716b-dc79-4398-a160-32eb70b50f12",
+      "name": "Mark all segments of a datasource as unused",
+      "request": {
+        "name": "Mark all segments of a datasource as unused",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "indexer",
+            "v1",
+            "datasources",
+            ":datasource"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "datasource",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "1d0a0911-bbdc-4fce-beda-37488c63dfbb",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "indexer",
+                "v1",
+                "datasources",
+                ":datasource"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "datasource",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "42107f74-4167-410f-bfea-0ab1af2f1439",
+      "name": "Mark segments matching criteria as used",
+      "request": {
+        "name": "Mark segments matching criteria as used",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "indexer",
+            "v1",
+            "datasources",
+            ":datasource",
+            "markUsed"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "datasource",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "277151dd-97d7-42bb-8c11-24d9043b6897",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "indexer",
+                "v1",
+                "datasources",
+                ":datasource",
+                "markUsed"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "datasource",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "14f40125-063a-4ebb-955a-00e733141781",
+      "name": "Mark segments matching criteria as unused",
+      "request": {
+        "name": "Mark segments matching criteria as unused",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "indexer",
+            "v1",
+            "datasources",
+            ":datasource",
+            "markUnused"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "datasource",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "<object>",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "2da15edd-eed5-4bdf-8e9d-3ac844b0598e",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "indexer",
+                "v1",
+                "datasources",
+                ":datasource",
+                "markUnused"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "datasource",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "4c147457-26ac-445d-9dab-2f985df654d6",
+      "name": "Mark a specific segment as used",
+      "request": {
+        "name": "Mark a specific segment as used",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "indexer",
+            "v1",
+            "datasources",
+            ":datasource",
+            "segments",
+            ":segmentId"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "datasource",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "segmentId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "d2c36c05-6e68-4892-b6e5-94186efc39d9",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "indexer",
+                "v1",
+                "datasources",
+                ":datasource",
+                "segments",
+                ":segmentId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "datasource",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "segmentId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c4678470-0bd0-4be1-91c1-20c7c00d1741",
+      "name": "Mark a specific segment as unused",
+      "request": {
+        "name": "Mark a specific segment as unused",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "indexer",
+            "v1",
+            "datasources",
+            ":datasource",
+            "segments",
+            ":segmentId"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "datasource",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "segmentId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3b351477-95e6-4416-a4a1-f60ab5af4240",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "indexer",
+                "v1",
+                "datasources",
+                ":datasource",
+                "segments",
+                ":segmentId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "datasource",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "segmentId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "31acc458-10ac-46dd-9f2f-52f88e125f72",
+      "name": "Mark segments in an interval as unused",
+      "request": {
+        "name": "Mark segments in an interval as unused",
+        "description": {},
+        "url": {
+          "path": [
+            "druid",
+            "coordinator",
+            "v1",
+            "datasources",
+            ":datasource",
+            "intervals",
+            ":interval"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "datasource",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "interval",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "91ce6de1-5aae-4d31-907b-1aede412100b",
+          "name": "OK",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "druid",
+                "coordinator",
+                "v1",
+                "datasources",
+                ":datasource",
+                "intervals",
+                ":interval"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "datasource",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "interval",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8888",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f58d1458-3728-4ebb-960e-974088004915",
+    "name": "Apache Druid REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI for Apache Druid SQL and Data Management HTTP endpoints, covering SQL queries, asynchronous statement queries, and segment/datasource management via the indexer and coordinator.",
+      "type": "text/plain"
+    }
+  }
+}
