@@ -3,19 +3,13 @@
   "feeds": [
     {
       "source": "https://druid.apache.org/blog/",
-      "feed_url": "https://druid.apache.org/blog/",
-      "title": "",
+      "feed_url": "",
       "saved": 0,
-      "method": "none"
-    },
-    {
-      "source": "https://druid.apache.org/docs/latest/tutorials/",
-      "feed_url": "https://druid.apache.org/docs/latest/tutorials/",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "method": "agent-scrape",
+      "error": "no dated posts found on listing page"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:23:40Z",
+  "agent_pulled": "2026-06-27"
 }

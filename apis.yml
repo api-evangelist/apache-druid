@@ -58,10 +58,10 @@ apis:
       - type: Tools
         url: https://github.com/apache/druid-operator
         title: Kubernetes Operator
-      - type: SDK
+      - type: SDKs
         url: https://mvnrepository.com/artifact/org.apache.druid/druid-sql
         title: JDBC Driver (Maven)
-      - type: SDK
+      - type: SDKs
         url: https://pypi.org/project/pydruid/
         title: pydruid Python Client
       - type: JSONSchema
@@ -95,16 +95,16 @@ apis:
       - type: JSONLD
         url: >-
           https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-ld/apache-druid-context.jsonld
-      - type: Example
+      - type: Examples
         url: >-
           https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/examples/apache-druid-ingestion-task-example.json
-      - type: Example
+      - type: Examples
         url: >-
           https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/examples/apache-druid-sql-query-request-example.json
-      - type: Example
+      - type: Examples
         url: >-
           https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/examples/apache-druid-sql-query-response-example.json
-      - type: Example
+      - type: Examples
         url: >-
           https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/examples/apache-druid-supervisor-example.json
 maintainers:
