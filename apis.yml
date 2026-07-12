@@ -111,6 +111,10 @@ maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
 common:
+  - type: VulnerabilityDisclosure
+    url: security/apache-druid-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/apache-druid-domain-security.yml
   - type: Portal
     url: https://druid.apache.org/
   - type: Documentation
