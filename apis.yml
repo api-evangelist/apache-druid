@@ -111,6 +111,8 @@ maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
 common:
+  - type: AgenticAccess
+    url: agentic-access/apache-druid-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/apache-druid-vulnerability-disclosure.yml
   - type: DomainSecurity
