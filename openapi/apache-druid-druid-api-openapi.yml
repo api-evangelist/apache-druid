@@ -1,16 +1,13 @@
 openapi: 3.1.0
 info:
-  title: Apache Druid REST API
-  version: "1.0"
-  description: >-
-    Minimal OpenAPI for Apache Druid SQL and Data Management HTTP endpoints,
-    covering SQL queries, asynchronous statement queries, and segment/datasource
-    management via the indexer and coordinator.
+  title: Apache REST Druid API
+  version: '1.0'
+  description: Minimal OpenAPI for Apache Druid SQL and Data Management HTTP endpoints, covering SQL queries, asynchronous statement queries, and segment/datasource management via the indexer and coordinator.
 servers:
-  - url: http://localhost:8888
-    description: Druid Router (default)
-x-generated-from: https://druid.apache.org/docs/latest/api-reference/
-x-generated-by: claude-crawl-2026-05-08
+- url: http://localhost:8888
+  description: Druid Router (default)
+tags:
+- name: Druid
 paths:
   /druid/v2/sql:
     post:
@@ -22,7 +19,7 @@ paths:
             schema:
               type: object
       responses:
-        "200":
+        '200':
           description: Query results
           content:
             application/json:
@@ -30,18 +27,22 @@ paths:
                 type: array
                 items:
                   type: object
+      tags:
+      - Druid
   /druid/v2/sql/{sqlQueryId}:
     delete:
       summary: Cancel a SQL query
       parameters:
-        - name: sqlQueryId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: sqlQueryId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
-        "202":
+        '202':
           description: Cancellation accepted
+      tags:
+      - Druid
   /druid/v2/sql/statements:
     post:
       summary: Submit an asynchronous SQL statement
@@ -52,50 +53,56 @@ paths:
             schema:
               type: object
       responses:
-        "200":
+        '200':
           description: Statement accepted
           content:
             application/json:
               schema:
                 type: object
+      tags:
+      - Druid
   /druid/v2/sql/statements/{queryId}:
     get:
       summary: Get statement status
       parameters:
-        - name: queryId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: queryId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
-        "200":
+        '200':
           description: Statement status
           content:
             application/json:
               schema:
                 type: object
+      tags:
+      - Druid
     delete:
       summary: Cancel an asynchronous statement
       parameters:
-        - name: queryId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: queryId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
-        "202":
+        '202':
           description: Cancellation accepted
+      tags:
+      - Druid
   /druid/v2/sql/statements/{queryId}/results:
     get:
       summary: Fetch statement results
       parameters:
-        - name: queryId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: queryId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
-        "200":
+        '200':
           description: Results
           content:
             application/json:
@@ -103,114 +110,128 @@ paths:
                 type: array
                 items:
                   type: object
+      tags:
+      - Druid
   /druid/indexer/v1/datasources/{datasource}:
     post:
       summary: Mark all segments of a datasource as used
       parameters:
-        - name: datasource
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: datasource
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
-        "200":
+        '200':
           description: OK
+      tags:
+      - Druid
     delete:
       summary: Mark all segments of a datasource as unused
       parameters:
-        - name: datasource
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: datasource
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
-        "200":
+        '200':
           description: OK
+      tags:
+      - Druid
   /druid/indexer/v1/datasources/{datasource}/markUsed:
     post:
       summary: Mark segments matching criteria as used
       parameters:
-        - name: datasource
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: datasource
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         content:
           application/json:
             schema:
               type: object
       responses:
-        "200":
+        '200':
           description: OK
+      tags:
+      - Druid
   /druid/indexer/v1/datasources/{datasource}/markUnused:
     post:
       summary: Mark segments matching criteria as unused
       parameters:
-        - name: datasource
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: datasource
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         content:
           application/json:
             schema:
               type: object
       responses:
-        "200":
+        '200':
           description: OK
+      tags:
+      - Druid
   /druid/indexer/v1/datasources/{datasource}/segments/{segmentId}:
     post:
       summary: Mark a specific segment as used
       parameters:
-        - name: datasource
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: segmentId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: datasource
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: segmentId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
-        "200":
+        '200':
           description: OK
+      tags:
+      - Druid
     delete:
       summary: Mark a specific segment as unused
       parameters:
-        - name: datasource
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: segmentId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: datasource
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: segmentId
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
-        "200":
+        '200':
           description: OK
+      tags:
+      - Druid
   /druid/coordinator/v1/datasources/{datasource}/intervals/{interval}:
     delete:
       summary: Mark segments in an interval as unused
       parameters:
-        - name: datasource
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: interval
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: datasource
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: interval
+        in: path
+        required: true
+        schema:
+          type: string
       responses:
-        "200":
+        '200':
           description: OK
-components:
-  schemas:
-    GenericObject:
-      type: object
+      tags:
+      - Druid
+x-generated-from: https://druid.apache.org/docs/latest/api-reference/
+x-generated-by: claude-crawl-2026-05-08
