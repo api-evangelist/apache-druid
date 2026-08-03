@@ -1,0 +1,14 @@
+{
+  "provider": "apache-druid",
+  "sources": [
+    "apache-druid-druid-api-openapi.yml"
+  ],
+  "outputs": [
+    "apache-druid-druid-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
