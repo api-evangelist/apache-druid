@@ -1,0 +1,269 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache REST Druid API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Druid",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit a Druid SQL query",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/druid/v2/sql",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit a Druid SQL query"
+        },
+        {
+          "info": {
+            "name": "Cancel a SQL query",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8888/druid/v2/sql/:sqlQueryId",
+            "params": [
+              {
+                "name": "sqlQueryId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Cancel a SQL query"
+        },
+        {
+          "info": {
+            "name": "Submit an asynchronous SQL statement",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/druid/v2/sql/statements",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit an asynchronous SQL statement"
+        },
+        {
+          "info": {
+            "name": "Get statement status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8888/druid/v2/sql/statements/:queryId",
+            "params": [
+              {
+                "name": "queryId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get statement status"
+        },
+        {
+          "info": {
+            "name": "Cancel an asynchronous statement",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8888/druid/v2/sql/statements/:queryId",
+            "params": [
+              {
+                "name": "queryId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Cancel an asynchronous statement"
+        },
+        {
+          "info": {
+            "name": "Fetch statement results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8888/druid/v2/sql/statements/:queryId/results",
+            "params": [
+              {
+                "name": "queryId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Fetch statement results"
+        },
+        {
+          "info": {
+            "name": "Mark all segments of a datasource as used",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/druid/indexer/v1/datasources/:datasource",
+            "params": [
+              {
+                "name": "datasource",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mark all segments of a datasource as used"
+        },
+        {
+          "info": {
+            "name": "Mark all segments of a datasource as unused",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8888/druid/indexer/v1/datasources/:datasource",
+            "params": [
+              {
+                "name": "datasource",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mark all segments of a datasource as unused"
+        },
+        {
+          "info": {
+            "name": "Mark segments matching criteria as used",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/druid/indexer/v1/datasources/:datasource/markUsed",
+            "params": [
+              {
+                "name": "datasource",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Mark segments matching criteria as used"
+        },
+        {
+          "info": {
+            "name": "Mark segments matching criteria as unused",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/druid/indexer/v1/datasources/:datasource/markUnused",
+            "params": [
+              {
+                "name": "datasource",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Mark segments matching criteria as unused"
+        },
+        {
+          "info": {
+            "name": "Mark a specific segment as used",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8888/druid/indexer/v1/datasources/:datasource/segments/:segmentId",
+            "params": [
+              {
+                "name": "datasource",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "segmentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mark a specific segment as used"
+        },
+        {
+          "info": {
+            "name": "Mark a specific segment as unused",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8888/druid/indexer/v1/datasources/:datasource/segments/:segmentId",
+            "params": [
+              {
+                "name": "datasource",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "segmentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mark a specific segment as unused"
+        },
+        {
+          "info": {
+            "name": "Mark segments in an interval as unused",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:8888/druid/coordinator/v1/datasources/:datasource/intervals/:interval",
+            "params": [
+              {
+                "name": "datasource",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "interval",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mark segments in an interval as unused"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
