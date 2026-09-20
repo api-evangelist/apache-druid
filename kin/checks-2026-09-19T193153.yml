@@ -2,16 +2,16 @@
 kin_checks:
   slug: apache-druid
   schema_version: 0.22.0
-  scored_at: '2026-09-18'
-  run_ts: 2026-09-18T231945
+  scored_at: '2026-09-19'
+  run_ts: 2026-09-19T193153
   note: Actionable checks (missed + partial) in `checks`, plus the ids that did not
     apply in `na`. Everything else in rubric/scoring-0.22.0.yml was earned; counts
     below let you verify that.
   counts:
     total: 136
-    earned: 38
+    earned: 37
     partial: 12
-    missed: 64
+    missed: 65
     na: 22
   checks:
   - id: multiple_apis
@@ -64,6 +64,9 @@ kin_checks:
     status: missed
   - id: rules_substantial
     status: missed
+  - id: vocabulary_published
+    status: missed
+    detail: pointer liveness 0.0
   - id: conformance_declared
     status: missed
   - id: overlay_published
