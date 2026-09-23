@@ -1,7 +1,7 @@
 {
   "provider": "apache-druid",
   "sources": [
-    "apache-druid-druid-api-openapi.yml"
+    "_ae-authored/apache-druid-openapi.yml"
   ],
   "outputs": [
     "apache-druid-druid-api-openapi.yml"
@@ -9,6 +9,26 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "apache-druid-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apache-druid-openapi.yml: tagged paths POST /druid/v2/sql -> Druid",
+    "apache-druid-openapi.yml: tagged paths DELETE /druid/v2/sql/{sqlQueryId} -> Druid",
+    "apache-druid-openapi.yml: tagged paths POST /druid/v2/sql/statements -> Druid",
+    "apache-druid-openapi.yml: tagged paths GET /druid/v2/sql/statements/{queryId} -> Druid",
+    "apache-druid-openapi.yml: tagged paths DELETE /druid/v2/sql/statements/{queryId} -> Druid",
+    "apache-druid-openapi.yml: tagged paths GET /druid/v2/sql/statements/{queryId}/results -> Druid",
+    "apache-druid-openapi.yml: tagged paths POST /druid/indexer/v1/datasources/{datasource} -> Druid",
+    "apache-druid-openapi.yml: tagged paths DELETE /druid/indexer/v1/datasources/{datasource} -> Druid",
+    "apache-druid-openapi.yml: tagged paths POST /druid/indexer/v1/datasources/{datasource}/markUsed -> Druid",
+    "apache-druid-openapi.yml: tagged paths POST /druid/indexer/v1/datasources/{datasource}/markUnused -> Druid",
+    "apache-druid-openapi.yml: tagged paths POST /druid/indexer/v1/datasources/{datasource}/segments/{segmentId} -> Druid",
+    "apache-druid-openapi.yml: tagged paths DELETE /druid/indexer/v1/datasources/{datasource}/segments/{segmentId} -> Druid",
+    "apache-druid-openapi.yml: tagged paths DELETE /druid/coordinator/v1/datasources/{datasource}/intervals/{interval} -> Druid",
+    "apache-druid-openapi.yml: declared missing tag: Druid",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "apache-druid-druid-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

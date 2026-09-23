@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Apache REST Druid API
   version: '1.0'
@@ -29,6 +29,8 @@ paths:
                   type: object
       tags:
       - Druid
+      operationId: postDruidV2Sql
+      x-operation-id-source: derived
   /druid/v2/sql/{sqlQueryId}:
     delete:
       summary: Cancel a SQL query
@@ -43,6 +45,8 @@ paths:
           description: Cancellation accepted
       tags:
       - Druid
+      operationId: deleteDruidV2SqlBySqlQueryId
+      x-operation-id-source: derived
   /druid/v2/sql/statements:
     post:
       summary: Submit an asynchronous SQL statement
@@ -61,6 +65,8 @@ paths:
                 type: object
       tags:
       - Druid
+      operationId: postDruidV2SqlStatements
+      x-operation-id-source: derived
   /druid/v2/sql/statements/{queryId}:
     get:
       summary: Get statement status
@@ -79,6 +85,8 @@ paths:
                 type: object
       tags:
       - Druid
+      operationId: getDruidV2SqlStatementsByQueryId
+      x-operation-id-source: derived
     delete:
       summary: Cancel an asynchronous statement
       parameters:
@@ -92,6 +100,8 @@ paths:
           description: Cancellation accepted
       tags:
       - Druid
+      operationId: deleteDruidV2SqlStatementsByQueryId
+      x-operation-id-source: derived
   /druid/v2/sql/statements/{queryId}/results:
     get:
       summary: Fetch statement results
@@ -112,6 +122,8 @@ paths:
                   type: object
       tags:
       - Druid
+      operationId: getDruidV2SqlStatementsByQueryIdResults
+      x-operation-id-source: derived
   /druid/indexer/v1/datasources/{datasource}:
     post:
       summary: Mark all segments of a datasource as used
@@ -126,6 +138,8 @@ paths:
           description: OK
       tags:
       - Druid
+      operationId: postDruidIndexerV1DatasourcesByDatasource
+      x-operation-id-source: derived
     delete:
       summary: Mark all segments of a datasource as unused
       parameters:
@@ -139,6 +153,8 @@ paths:
           description: OK
       tags:
       - Druid
+      operationId: deleteDruidIndexerV1DatasourcesByDatasource
+      x-operation-id-source: derived
   /druid/indexer/v1/datasources/{datasource}/markUsed:
     post:
       summary: Mark segments matching criteria as used
@@ -158,6 +174,8 @@ paths:
           description: OK
       tags:
       - Druid
+      operationId: postDruidIndexerV1DatasourcesByDatasourceMarkUsed
+      x-operation-id-source: derived
   /druid/indexer/v1/datasources/{datasource}/markUnused:
     post:
       summary: Mark segments matching criteria as unused
@@ -177,6 +195,8 @@ paths:
           description: OK
       tags:
       - Druid
+      operationId: postDruidIndexerV1DatasourcesByDatasourceMarkUnused
+      x-operation-id-source: derived
   /druid/indexer/v1/datasources/{datasource}/segments/{segmentId}:
     post:
       summary: Mark a specific segment as used
@@ -196,6 +216,8 @@ paths:
           description: OK
       tags:
       - Druid
+      operationId: postDruidIndexerV1DatasourcesByDatasourceSegmentsBySegmentId
+      x-operation-id-source: derived
     delete:
       summary: Mark a specific segment as unused
       parameters:
@@ -214,6 +236,8 @@ paths:
           description: OK
       tags:
       - Druid
+      operationId: deleteDruidIndexerV1DatasourcesByDatasourceSegmentsBySegmentId
+      x-operation-id-source: derived
   /druid/coordinator/v1/datasources/{datasource}/intervals/{interval}:
     delete:
       summary: Mark segments in an interval as unused
@@ -233,5 +257,7 @@ paths:
           description: OK
       tags:
       - Druid
+      operationId: deleteDruidCoordinatorV1DatasourcesByDatasourceIntervalsByInterval
+      x-operation-id-source: derived
 x-generated-from: https://druid.apache.org/docs/latest/api-reference/
 x-generated-by: claude-crawl-2026-05-08
