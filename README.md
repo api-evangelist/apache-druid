@@ -1,4 +1,4 @@
-# Apache Druid (apache-druid)
+# Apache Druid
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,93 +66,162 @@
 
 Apache Druid is a high-performance, real-time analytics database governed by the Apache Software Foundation, designed for fast slice-and-dice OLAP queries on event-time data. It features a distributed, column-oriented storage engine with automatic rollup, supports both streaming (Kafka, Kinesis) and batch (S3, HDFS, local) data ingestion, and provides a SQL query interface plus a native JSON query API via REST. Druid is optimized for sub-second queries at petabyte scale with high concurrency.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/apis.yml)
+**Areas:** Analytics · Apache · Database · Kafka · OLAP · Open Source · Real-Time · SQL · Time Series
 
-## Scope
+## Apache Druid on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Apache Druid is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apache-druid/](https://apis.io/providers/apache-druid/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Analytics
-- Apache
-- Database
-- Kafka
-- OLAP
-- Open Source
-- Real-Time
-- SQL
-- Time Series
+- [Apache Druid API](https://apis.io/apis/apache-druid/apache-druid-druid-api/) — The Druid API from Apache Druid — 10 operation(s) for druid.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Apache Druid REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Druid exposes REST APIs for Druid SQL (POST /druid/v2/sql), native JSON queries (POST /druid/v2), batch and streaming data ingestion tasks, supervisor management for Kafka/Kinesis ingestion, data segment management, coordinator and overlord operations, process status, and dynamic configuration. A JDBC driver is also available for SQL access via JDBC clients.
+- [Apache Druid Agentic Access](https://apis.io/agentic-access/apache-druid/apache-druid-agentic-access/)
 
-- **Human URL:** [https://druid.apache.org/docs/latest/api-reference/](https://druid.apache.org/docs/latest/api-reference/)
+#### JSON Schema (4)
 
-#### Tags
+The data models the API reads and writes.
 
-- Analytics
-- Data Ingestion
-- Datasources
-- JSON Query
-- Kafka
-- OLAP
-- REST
-- SQL
-- Segments
-- Supervisors
+- [IngestionTask](https://apis.io/schemas/apache-druid/apache-druid-ingestion-task/)
+- [SqlQueryRequest](https://apis.io/schemas/apache-druid/apache-druid-sql-query-request/)
+- [SqlQueryResponse](https://apis.io/schemas/apache-druid/apache-druid-sql-query-response/)
+- [Supervisor](https://apis.io/schemas/apache-druid/apache-druid-supervisor/)
 
-#### Properties
+#### JSON Structure (4)
 
-- [Documentation](https://druid.apache.org/docs/latest/api-reference/)
-- [OpenAPI](openapi/apache-druid-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/apache-druid.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/apache-druid.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Getting Started](https://druid.apache.org/docs/latest/tutorials/tutorial-batch-hadoop)
-- [API Reference](https://druid.apache.org/docs/latest/api-reference/)
-- [GitHub Repository](https://github.com/apache/druid)
-- [Tools](https://github.com/apache/druid-operator)
-- [SDK](https://mvnrepository.com/artifact/org.apache.druid/druid-sql)
-- [SDK](https://pypi.org/project/pydruid/)
-- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-schema/apache-druid-ingestion-task-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-schema/apache-druid-sql-query-request-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-schema/apache-druid-sql-query-response-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-schema/apache-druid-supervisor-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Structure](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-structure/apache-druid-ingestion-task-structure.json)
-- [JSON Structure](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-structure/apache-druid-sql-query-request-structure.json)
-- [JSON Structure](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-structure/apache-druid-sql-query-response-structure.json)
-- [JSON Structure](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-structure/apache-druid-supervisor-structure.json)
-- [JSON-LD](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/json-ld/apache-druid-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Example](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/examples/apache-druid-ingestion-task-example.json)
-- [Example](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/examples/apache-druid-sql-query-request-example.json)
-- [Example](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/examples/apache-druid-sql-query-response-example.json)
-- [Example](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/examples/apache-druid-supervisor-example.json)
+Data models expressed in JSON Structure.
 
-## Common Properties
+- [Apache Druid Ingestion Task Structure](https://apis.io/json-structure/apache-druid/apache-druid-ingestion-task-structure/)
+- [Apache Druid Sql Query Request Structure](https://apis.io/json-structure/apache-druid/apache-druid-sql-query-request-structure/)
+- [Apache Druid Sql Query Response Structure](https://apis.io/json-structure/apache-druid/apache-druid-sql-query-response-structure/)
+- [Apache Druid Supervisor Structure](https://apis.io/json-structure/apache-druid/apache-druid-supervisor-structure/)
 
-- [Portal](https://druid.apache.org/)
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Apache Druid Context](https://apis.io/jsonld/apache-druid/apache-druid-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Apache Druid Vocabulary](https://apis.io/vocabularies/apache-druid/apache-druid-vocabulary/)
+
+#### Examples (4)
+
+Example requests and responses.
+
+- [Apache Druid Ingestion Task Example](https://apis.io/examples/apache-druid/apache-druid-ingestion-task-example/)
+- [Apache Druid Sql Query Request Example](https://apis.io/examples/apache-druid/apache-druid-sql-query-request-example/)
+- [Apache Druid Sql Query Response Example](https://apis.io/examples/apache-druid/apache-druid-sql-query-response-example/)
+- [Apache Druid Supervisor Example](https://apis.io/examples/apache-druid/apache-druid-supervisor-example/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [Apache Druid REST API](https://apis.io/collections/apache-druid/open-apache-druid/)
+- [Apache REST Druid API](https://apis.io/collections/apache-druid/open-apache-druid-druid-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Apache Druid — jsonschema rules](https://apis.io/rules/apache-druid/apache-druid-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Apache Druid Domain Security](https://apis.io/security/apache-druid/apache-druid-domain-security/)
+- [Apache Druid Vulnerability Disclosure](https://apis.io/security/apache-druid/apache-druid-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Apache Druid Plans Pricing](https://apis.io/plans/apache-druid/apache-druid-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Apache Druid Rate Limits](https://apis.io/rate-limits/apache-druid/apache-druid-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Apache Druid Finops](https://apis.io/finops/apache-druid/apache-druid-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.apache.org/)
 - [Documentation](https://druid.apache.org/docs/latest/)
-- [Getting Started](https://druid.apache.org/docs/latest/tutorials/)
+- [Getting started](https://druid.apache.org/docs/latest/tutorials/)
 - [Blog](https://druid.apache.org/blog/)
-- [GitHub Organization](https://github.com/apache)
-- [GitHub Repository](https://github.com/apache/druid)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/druid)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
-- [Vocabulary](https://raw.githubusercontent.com/api-evangelist/apache-druid/refs/heads/main/vocabulary/apache-druid-vocabulary.yaml)
+- [GitHub](https://github.com/apache)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** info@apievangelist.com
+**Kin Score 36.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 50.6 |
+| Contract governance | 9.8 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 7.9 |
+
+**Agent readiness 18.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apache-druid/](https://apis.io/providers/apache-druid/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apache Druid: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apache-druid/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
